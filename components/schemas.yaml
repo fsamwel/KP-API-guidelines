@@ -15,6 +15,34 @@ HalCollectionLinks:
       allOf: [$ref: '#/HalLink']
       description: Absolute link naar volgende pagina (niet aanwezig als er geen
         volgende pagina is).
+Datum_onvolledig:
+  type: "object"
+  properties:
+    datum:
+      type: "string"
+      title: "datum"
+      format: "date"
+      description: "De volledige datum die in de `date` definitie past. Dit element wordt alleen gevuld als de volledige datum bekend is."
+    jaar:
+      type: "string"
+      title: "jaar"
+      description: "Het jaar van de datum. Als het jaar bekend is wordt dit element gevuld, ook als de volledige datum bekend is."
+      format: "date_fullyear"
+      pattern: "^[1-2]{1}[0-9]{3}$"
+    maand:
+      type: "string"
+      title: "maand"
+      description: "De maand. Als de maand van een datum bekend is wordt dee hier ingeveuld. Ook als de volledige datum is ingevuld."
+      format: "date_month"
+      pattern: "^99$"
+      maxLength: 2
+    dag:
+      type: "string"
+      title: "dag"
+      description: "De dag. Als de dag van de datum bekend is wordt deze hier ingevuld. Ook als de volledige datum bekend is."
+      format: "date_mday"
+      pattern: "^99$"
+      maxLength: 2
 GeoJsonObject:
   type: object
   required:
