@@ -18,7 +18,7 @@ xTotalCount:
   description: Totaal aantal resultaten.
   schema:
     type: integer
-api_version:
+apiVersion:
   schema:
     type: "string"
     description: Geeft een specifieke API-versie aan in de context van een specifieke aanroep.
