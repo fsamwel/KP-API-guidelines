@@ -15,7 +15,7 @@ HalCollectionLinks:
       allOf: [$ref: '#/HalLink']
       description: Absolute link naar volgende pagina (niet aanwezig als er geen
         volgende pagina is).
-Datum_onvolledig:
+DatumOnvolledig:
   type: "object"
   properties:
     datum:
